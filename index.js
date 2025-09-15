@@ -73,6 +73,16 @@ app.post("/login", async (req, res) => {
         return res.status(500).json({ erro: "Ocorreu um erro interno no servidor." });
     }
 });
+
+app.get("/teste"), async (req, res) => {
+    try{
+        return res.staus(200).json({ msg: "Servidor rodando!" })
+    }catch (erro) {
+        return res.staus(400).json({ erro: "Houve um problema com o servidor" })
+    }
+} 
+
+
 // --- FUNÇÕES DE BANCO DE DADOS ---
 
 async function conectaDB() {
